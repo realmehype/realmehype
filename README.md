@@ -1,16 +1,111 @@
-# GitHub Pages
+<!DOCTYPE html><html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OriginOS Web</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+      background: linear-gradient(135deg, #4f46e5, #8b5cf6);
+      color: white;
+      text-align: center;
+      overflow-x: hidden;
+      animation: fadeIn 1.5s ease-in;
+    }@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 
-<img src="https://octodex.github.com/images/Professortocat_v2.png" align="right" height="200px" />
+h1 {
+  margin-top: 50px;
+  font-size: 2.5rem;
+  animation: slideDown 1s ease-out;
+}
 
-Hey realmehype!
+@keyframes slideDown {
+  from { transform: translateY(-30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
 
-Mona here. I'm done preparing your exercise. Hope you enjoy! 💚
+.apps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 20px;
+  padding: 40px 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
 
-Remember, it's self-paced so feel free to take a break! ☕️
+.app {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  transition: background 0.3s, transform 0.3s, box-shadow 0.3s;
+  animation: fadeUp 1s ease forwards;
+  opacity: 0;
+}
 
-[![](https://img.shields.io/badge/Go%20to%20Exercise-%E2%86%92-1f883d?style=for-the-badge&logo=github&labelColor=197935)](https://github.com/realmehype/realmehype/issues/1)
+.app:nth-child(1) { animation-delay: 0.3s; }
+.app:nth-child(2) { animation-delay: 0.5s; }
+.app:nth-child(3) { animation-delay: 0.7s; }
+.app:nth-child(4) { animation-delay: 0.9s; }
+.app:nth-child(5) { animation-delay: 1.1s; }
+.app:nth-child(6) { animation-delay: 1.3s; }
 
----
+@keyframes fadeUp {
+  from { transform: translateY(20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
 
-&copy; 2025 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
+.app:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+}
 
+.icon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  display: block;
+  animation: popIn 0.8s ease;
+}
+
+@keyframes popIn {
+  from { transform: scale(0); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+  </style>
+</head>
+<body>
+  <h1>OriginOS Web</h1>
+  <div class="apps">
+    <div class="app">
+      <div class="icon">📷</div>
+      <div>Камера</div>
+    </div>
+    <div class="app">
+      <div class="icon">🖼️</div>
+      <div>Галерея</div>
+    </div>
+    <div class="app">
+      <div class="icon">⚙️</div>
+      <div>Настройки</div>
+    </div>
+    <div class="app">
+      <div class="icon">🎵</div>
+      <div>Музыка</div>
+    </div>
+    <div class="app">
+      <div class="icon">📞</div>
+      <div>Телефон</div>
+    </div>
+    <div class="app">
+      <div class="icon">🌐</div>
+      <div>Браузер</div>
+    </div>
+  </div>
+</body>
+</html>
